@@ -18,8 +18,8 @@ public class BaseTest {
 	static WebDriver driver;
 	@BeforeMethod
 	public static void openUrl() {
-		 WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		 WebDriverManager.edgedriver().setup()
+		 driver = new EdgeDriver();
 		 driver.get("http://amazon.in/"); 
 		
 	}

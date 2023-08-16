@@ -20,7 +20,7 @@ pipeline {
         stage('Sonar Qube'){
             steps{
                 withSonarQubeEnv('SonarQube'){
-                    bat 'mvn clean verify sonar:sonar'
+                    bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=newwebapp  -Dsonar.projectName="newwebapp" -Dsonar.host.url=http://localhost:9000  -Dsonar.token=sqp_a576237b0c840c4b4bc73b0781d55faa36911e8b'
                 }
             }
         }

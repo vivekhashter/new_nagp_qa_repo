@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Sonar Qube'){
             steps{
-                withSonarQubeEnv('Sonarqube'){
+                withSonarQubeEnv('SonarQube'){
                     bat 'mvn clean verify sonar:sonar'
                 }
             }
